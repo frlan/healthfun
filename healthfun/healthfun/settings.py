@@ -24,6 +24,11 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+	'django.contrib.messages.context_processors.messages',
+	'django.contrib.auth.context_processors.auth'
+)
+
 ALLOWED_HOSTS = []
 
 
@@ -36,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
     'south',
     'weight'
 )
@@ -47,7 +53,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware'
 )
+
+ 
 
 ROOT_URLCONF = 'healthfun.urls'
 
