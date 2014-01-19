@@ -6,12 +6,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: healthfun\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-19 15:08+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-01-19 15:14+0100\n"
+"Last-Translator: Frank Lanitz <frlan@frank.uvena.de>\n"
+"Language-Team: de <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,20 +20,20 @@ msgstr ""
 
 #: pressure/models.py:6 weight/models.py:7
 msgid "Messurement timestamp"
-msgstr ""
+msgstr "Messzeitpunkt"
 
 #: pressure/models.py:7
 msgid "systolic"
-msgstr ""
+msgstr "systolisch"
 
 #: pressure/models.py:8
 msgid "diastolic"
-msgstr ""
+msgstr "diastlisch"
 
 #: pressure/models.py:9
 msgid "Pulse"
-msgstr ""
+msgstr "Puls"
 
 #: weight/models.py:6
 msgid "Weight"
-msgstr ""
+msgstr "Gewicht"
