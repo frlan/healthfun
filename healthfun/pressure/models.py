@@ -7,4 +7,7 @@ class Pressure (models.Model):
     sys = models.FloatField(blank=False, null=False)
     dia = models.FloatField(blank=False, null=False)
     pulse = models.IntegerField(blank=False, null=False)
+    
+    def __unicode__(self):
+        return self.timestamp.strftime("%y-%m-%d: %H-%M")
             
