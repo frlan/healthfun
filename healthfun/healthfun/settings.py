@@ -43,7 +43,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
-    'weight'
+    'weight',
+    'pressure'
 )
 
 MIDDLEWARE_CLASSES = (
