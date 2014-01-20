@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
+    'person',
     'weight',
     'pressure'
 )
@@ -57,7 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
- 
+
 
 ROOT_URLCONF = 'healthfun.urls'
 

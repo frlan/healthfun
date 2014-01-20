@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 class Weight(models.Model):
+    person = models.ForeignKey('person.Person')
     weight = models.FloatField(blank=False, null=False, verbose_name=_(u"Weight"))
     timestamp = models.DateTimeField(verbose_name=_(u"Messurement timestamp"))
 
