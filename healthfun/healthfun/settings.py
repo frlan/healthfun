@@ -13,6 +13,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+SITE_ID = 1
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -27,6 +29,10 @@ TEMPLATE_DEBUG = True
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'django.contrib.auth.context_processors.auth'
+)
+
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates/'
 )
 
 ALLOWED_HOSTS = []
