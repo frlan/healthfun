@@ -25,8 +25,8 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-	'django.contrib.messages.context_processors.messages',
-	'django.contrib.auth.context_processors.auth'
+    'django.contrib.messages.context_processors.messages',
+    'django.contrib.auth.context_processors.auth'
 )
 
 ALLOWED_HOSTS = []
@@ -42,6 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'django.contrib.sites',
+    'registration',
     'south',
     'messurements'
 )
@@ -94,3 +96,8 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# User registration
+
+ACCOUNT_ACTIVATION_DAYS = 7
+

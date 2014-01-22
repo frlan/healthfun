@@ -1,4 +1,5 @@
 Django
+django-registration
 South
 argparse
 wsgiref
