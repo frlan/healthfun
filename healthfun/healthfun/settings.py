@@ -107,3 +107,6 @@ STATIC_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
+
+# Temp. no real mail sending out
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
