@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from pressure.models import Pressure
+from messurements.models import Pressure, Weight
 
 admin.site.register(Pressure)
+admin.site.register(Weight)

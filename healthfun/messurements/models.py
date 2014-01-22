@@ -12,3 +12,10 @@ class Pressure (models.Model):
     def __unicode__(self):
         return self.timestamp.strftime("%y-%m-%d: %H-%M")
 
+class Weight(models.Model):
+    person = models.ForeignKey('person.Person')
+    weight = models.FloatField(blank=False, null=False, verbose_name=_(u"Weight"))
+    timestamp = models.DateTimeField(verbose_name=_(u"Messurement timestamp"))
+
+    def __unicode__(self):
+        return self.timestamp.strftime("%y-%m-%d: %H-%M")

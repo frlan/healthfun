@@ -44,8 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'person',
-    'weight',
-    'pressure'
+    'messurements'
 )
 
 MIDDLEWARE_CLASSES = (
