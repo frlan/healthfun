@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: healthfun\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-19 15:08+0100\n"
-"PO-Revision-Date: 2014-01-19 15:14+0100\n"
-"Last-Translator: Frank Lanitz <frlan@frank.uvena.de>\n"
+"POT-Creation-Date: 2014-01-22 22:16+0100\n"
+"PO-Revision-Date: 2014-01-22 22:16+0100\n"
+"Last-Translator: Frank Lanitz <frank@frank.uvena.de>\n"
 "Language-Team: de <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -18,22 +18,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: pressure/models.py:6 weight/models.py:7
+#: messurements/models.py:8 messurements/models.py:19
 msgid "Messurement timestamp"
 msgstr "Messzeitpunkt"
 
-#: pressure/models.py:7
+#: messurements/models.py:9
 msgid "systolic"
 msgstr "systolisch"
 
-#: pressure/models.py:8
+#: messurements/models.py:10
 msgid "diastolic"
 msgstr "diastlisch"
 
-#: pressure/models.py:9
+#: messurements/models.py:11
 msgid "Pulse"
 msgstr "Puls"
 
-#: weight/models.py:6
+#: messurements/models.py:18
 msgid "Weight"
 msgstr "Gewicht"
+
+#: templates/base.html:5
+msgid "en"
+msgstr "de"
+
+#: templates/base.html:8
+msgid "My amazing site"
+msgstr "Meine coole Seite"
+
+#: templates/registration/activate.html:6
+#, python-format
+msgid ""
+"\n"
+"The key %(activation_key)s was not able to be verified. Did you copy it "
+"correct?\n"
+msgstr ""
+
+#: templates/registration/activation_complete.html:6
+msgid "Your activation was successful. Yeah."
+msgstr "Die Aktivierung war erfolgreich. Juhu."
+
+#: templates/registration/registration_complete.html:6
+msgid ""
+"Your registration has been completed. You will receive an link to activate "
+"your account."
+msgstr ""
+"Deine Registrierung ist vollständig. Du erhälst nun einen Link zur "
+"Bestätigung Deines Accounts per Mail zugesendet"
