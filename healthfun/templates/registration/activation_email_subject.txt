@@ -1,0 +1,1 @@
+Please validate your account at {{site}}

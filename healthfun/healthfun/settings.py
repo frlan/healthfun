@@ -13,6 +13,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+SITE_ID = 1
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
@@ -25,8 +27,12 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-	'django.contrib.messages.context_processors.messages',
-	'django.contrib.auth.context_processors.auth'
+    'django.contrib.messages.context_processors.messages',
+    'django.contrib.auth.context_processors.auth'
+)
+
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates/'
 )
 
 ALLOWED_HOSTS = []
@@ -42,8 +48,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'django.contrib.sites',
+    'registration',
     'south',
-    'person',
     'messurements'
 )
 
@@ -95,3 +102,11 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# User registration
+
+ACCOUNT_ACTIVATION_DAYS = 7
+
+
+# Temp. no real mail sending out
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
