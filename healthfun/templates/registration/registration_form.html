@@ -1,7 +1,12 @@
-<form method="post" class="form-horizontal">
+{% extends "base.html" %}
+{% load i18n %}
+{% block title%}Start{% endblock title %}
+{% block content %}
+<form method="post" class="form-horizontal" >
 {% csrf_token %}
 <table>
-{{form.as_table}}
+	{{form.as_table}}
 </table>
 <input type="submit" value="Submit">
 </form>
+{% endblock content %}
