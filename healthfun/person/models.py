@@ -7,3 +7,6 @@ class Person(models.Model):
     last_name = models.CharField(verbose_name=_(u"Last Name"), max_length=75, blank=True)
     height = models.IntegerField(blank=True)
     email = models.EmailField()
+
+    def __unicode__ (self):
+        return self.email
