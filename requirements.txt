@@ -3,3 +3,4 @@ django-registration
 South
 argparse
 wsgiref
+pytz
