@@ -5,7 +5,7 @@
         {% if output %}
                 <ul>
                 {% for item in output %}
-                        <li>{{ item }}</li>{% endfor %}
+                        <li>{{ item.date }}: {{ item.avg1}} {%if item.avg2 %} {{ item.avg2 }} {% endif %} </li>{% endfor %}
                 </ul>
         {% else %}
                 <p>{% trans "No nodes registered at the moment." %}</p>
