@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title%}Start{% endblock title %}
+{% block content %}
+        {% if output %}
+                <ul>
+                {% for item in output %}
+                        <li>{{ item }}</li>{% endfor %}
+                </ul>
+        {% else %}
+                <p>{% trans "No nodes registered at the moment." %}</p>
+        {% endif %}
+{% endblock content %}
