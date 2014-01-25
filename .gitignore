@@ -1,3 +1,4 @@
 *.pyc
 *.swp
 *.mo
+local_settings.py

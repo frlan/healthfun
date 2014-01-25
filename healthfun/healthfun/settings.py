@@ -110,3 +110,15 @@ ACCOUNT_ACTIVATION_DAYS = 7
 
 # Temp. no real mail sending out
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+##################
+# LOCAL SETTINGS #
+##################
+
+# Allow any settings to be defined in local_settings.py which should be
+# ignored in your version control system allowing for settings to be
+# defined per machine.
+try:
+    from local_settings import *
+except ImportError:
+    pass
