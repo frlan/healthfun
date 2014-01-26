@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: healthfun\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 19:49+0100\n"
-"PO-Revision-Date: 2014-01-22 22:16+0100\n"
-"Last-Translator: Frank Lanitz <frank@frank.uvena.de>\n"
+"POT-Creation-Date: 2014-01-26 23:11+0100\n"
+"PO-Revision-Date: 2014-01-26 23:13+0100\n"
+"Last-Translator: Frank Lanitz <frlan@frank.uvena.de>\n"
 "Language-Team: de <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -42,13 +42,26 @@ msgstr "Gewicht"
 msgid "en"
 msgstr "de"
 
-#: templates/list.html:11
-msgid "No nodes registered at the moment."
+#: templates/index.html:3
+msgid "Healthfun: Start"
+msgstr "Healthfun: Start"
+
+#: templates/index.html:5
+msgid ""
+"\n"
+"\n"
+"<p>This is a little service to collect some personal, fundamental \n"
+"health data like blood pressure and weight</p>\n"
+"\n"
 msgstr ""
+
+#: templates/list.html:11
+msgid "No data available at the moment"
+msgstr "Aktuell sind noch keine Daten verfügbar."
 
 #: templates/registration/activate.html:3
 msgid "Healthfun: Activation of your account"
-msgstr ""
+msgstr "Healthfun: Aktivierung Deines Kontos"
 
 #: templates/registration/activate.html:6
 #, python-format
@@ -72,7 +85,7 @@ msgstr ""
 
 #: templates/registration/activation_email.txt:6
 msgid "Thanks"
-msgstr ""
+msgstr "Danke"
 
 #: templates/registration/activation_email.txt:7
 #, python-format
@@ -87,7 +100,7 @@ msgstr ""
 
 #: templates/registration/logout.html:5
 msgid "You have been logged out"
-msgstr ""
+msgstr "Du wurdest ausgeloggt"
 
 #: templates/registration/registration_closed.html:3
 msgid "Healthfun: Registration not complete"
