@@ -8,6 +8,14 @@
     <title>{% block title %} "healthfun" {% endblock %}</title>
     <meta name="generator" content="Geany 1.24" />
 <body>
+
+<div>{% if user.is_authenticated %}
+        <p><a href="{% url "auth_logout" %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url "auth_login" %}">Login</a></p>
+    {% endif %}
+</div>
+
 {% block content %}Empty page{% endblock %}
 </body>
 </html>
