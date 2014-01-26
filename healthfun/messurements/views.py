@@ -55,7 +55,6 @@ def PressureWeightView(request):
             pressure.timestamp = record_time
             pressure.user = request.user
             pressure.save()
-            print weight_form
             weight = weight_form.save(commit=False)
             weight.timestamp = record_time
             weight.user = request.user
