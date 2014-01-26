@@ -8,6 +8,6 @@
                         <li>{{ item.date }}: {{ item.avg1}} {%if item.avg2 %} {{ item.avg2 }} {% endif %} </li>{% endfor %}
                 </ul>
         {% else %}
-                <p>{% trans "No nodes registered at the moment." %}</p>
+                <p>{% trans "No data available at the moment" %}</p>
         {% endif %}
 {% endblock content %}
