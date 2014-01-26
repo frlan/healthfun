@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: healthfun\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-22 22:16+0100\n"
+"POT-Creation-Date: 2014-01-26 19:49+0100\n"
 "PO-Revision-Date: 2014-01-22 22:16+0100\n"
 "Last-Translator: Frank Lanitz <frank@frank.uvena.de>\n"
 "Language-Team: de <LL@li.org>\n"
@@ -18,23 +18,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: messurements/models.py:8 messurements/models.py:19
-msgid "Messurement timestamp"
-msgstr "Messzeitpunkt"
-
-#: messurements/models.py:9
+#: messurements/models.py:8
 msgid "systolic"
 msgstr "systolisch"
 
-#: messurements/models.py:10
+#: messurements/models.py:9
 msgid "diastolic"
 msgstr "diastlisch"
 
-#: messurements/models.py:11
+#: messurements/models.py:10
 msgid "Pulse"
 msgstr "Puls"
 
-#: messurements/models.py:18
+#: messurements/models.py:11 messurements/models.py:20
+msgid "Messurement timestamp"
+msgstr "Messzeitpunkt"
+
+#: messurements/models.py:19
 msgid "Weight"
 msgstr "Gewicht"
 
@@ -42,9 +42,13 @@ msgstr "Gewicht"
 msgid "en"
 msgstr "de"
 
-#: templates/base.html:8
-msgid "My amazing site"
-msgstr "Meine coole Seite"
+#: templates/list.html:11
+msgid "No nodes registered at the moment."
+msgstr ""
+
+#: templates/registration/activate.html:3
+msgid "Healthfun: Activation of your account"
+msgstr ""
 
 #: templates/registration/activate.html:6
 #, python-format
@@ -54,9 +58,53 @@ msgid ""
 "correct?\n"
 msgstr ""
 
+#: templates/registration/activation_complete.html:3
+msgid "Healthfun: Activating complete"
+msgstr ""
+
 #: templates/registration/activation_complete.html:6
 msgid "Your activation was successful. Yeah."
 msgstr "Die Aktivierung war erfolgreich. Juhu."
+
+#: templates/registration/activation_email.txt:3
+msgid "Healthfun: Thanks for registering"
+msgstr ""
+
+#: templates/registration/activation_email.txt:6
+msgid "Thanks"
+msgstr ""
+
+#: templates/registration/activation_email.txt:7
+#, python-format
+msgid ""
+"for registering. Please visit %(site)s/accounts/activate/%(activation_key)s "
+"to activate your account."
+msgstr ""
+
+#: templates/registration/login.html:3
+msgid "Healthfun: Login"
+msgstr ""
+
+#: templates/registration/logout.html:5
+msgid "You have been logged out"
+msgstr ""
+
+#: templates/registration/registration_closed.html:3
+msgid "Healthfun: Registration not complete"
+msgstr ""
+
+#: templates/registration/registration_closed.html:6
+#, fuzzy
+msgid ""
+"Your registration could not be completed. Please get in contact with "
+"webmaster."
+msgstr ""
+"Deine Registrierung ist vollständig. Du erhälst nun einen Link zur "
+"Bestätigung Deines Accounts per Mail zugesendet"
+
+#: templates/registration/registration_complete.html:3
+msgid "Healthfun: Registration complete"
+msgstr ""
 
 #: templates/registration/registration_complete.html:6
 msgid ""
@@ -65,3 +113,10 @@ msgid ""
 msgstr ""
 "Deine Registrierung ist vollständig. Du erhälst nun einen Link zur "
 "Bestätigung Deines Accounts per Mail zugesendet"
+
+#: templates/registration/registration_form.html:3
+msgid "Datainput"
+msgstr ""
+
+#~ msgid "My amazing site"
+#~ msgstr "Meine coole Seite"

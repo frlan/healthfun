@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 
-from messurements.views import PressureListView, WeightListView
+from messurements.views import PressureListView, WeightListView, PressureWeightView
 
 from django.contrib import admin
 admin.autodiscover()
@@ -15,6 +15,7 @@ urlpatterns = i18n_patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
-    url(r'^weight/list/$', WeightListView.as_view()),
-    url(r'^pressure/list/$', PressureListView.as_view()),
+    url(r'^weight/list/$', WeightListView.as_view(), name="weight-list"),
+    url(r'^pressure/list/$', PressureListView.as_view(), name="pressure-list"),
+    url(r'^messurement/add/$', PressureWeightView, name="Foo")
 )

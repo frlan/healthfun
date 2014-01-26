@@ -1,3 +1,8 @@
-Hi you,
+{% extends "base.html" %}
+{% load i18n %}
+{% block title%}{% blocktrans %}Healthfun: Thanks for registering{% endblocktrans %}{% endblock title %}
 
-Thanks for registering. Please visit {{site}}/accounts/activate/{{activation_key}} to activate your account.
+{% block content %}
+<h1>{% trans "Thanks" %}</hi>
+<p>{% blocktrans %}for registering. Please visit {{site}}/accounts/activate/{{activation_key}} to activate your account.{% endblocktrans %}</p>
+{% endblock content}
