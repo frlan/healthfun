@@ -20,7 +20,7 @@ class PressureListView(View):
 
     def get(self, request, *args, **kwargs):
         qs = list(
-             Pressure.objects.filter(user=1)
+             Pressure.objects.filter(user=request.user)
              .extra({'date':"date(timestamp)"})
              .values('date').annotate(avg1=Avg('sys'))
              .annotate(avg2=Avg('dia'))
@@ -36,7 +36,7 @@ class WeightListView(View):
 
     def get(self, request, *args, **kwargs):
         qs = list(
-             Weight.objects.filter(user=1)
+             Weight.objects.filter(user=request.user)
              .extra({'date':"date(timestamp)"})
              .values('date')
              .annotate(avg1=Avg('weight')))
