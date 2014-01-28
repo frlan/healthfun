@@ -4,6 +4,15 @@ Healthfun
 A little Django-webapplication, collecting generic health data like
 weight and blood pressure to have a better overview.
 
+Customizing
+===========
+
+You will ne to check several places for customizing the application. 
+Here are the most important:
+ 
+ * Update the templates stored unter templates/
+ * Check configuration file at healthfun/settings.py
+
 i18n/l10n or update of translations
 ===================================
 
