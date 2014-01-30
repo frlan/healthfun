@@ -107,6 +107,7 @@ STATIC_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
+LOGIN_REDIRECT_URL = 'user-dashboard'
 
 # Temp. no real mail sending out
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

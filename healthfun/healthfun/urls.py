@@ -21,6 +21,7 @@ urlpatterns = i18n_patterns('',
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^weight/list/$', login_required(WeightListView.as_view()), name="weight-list"),
     url(r'^pressure/list/$', login_required(PressureListView.as_view()), name="pressure-list"),
-    url(r'^messurement/add/$', PressureWeightView, name="Foo"),
-    url(r'^$', TemplateView.as_view(template_name='index.html'), name="home")
+    url(r'^messurement/add/$', PressureWeightView, name="add_values"),
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name="home"),
+    url(r'^dashboard/$', TemplateView.as_view(template_name='dashboard.html'), name="user_dashboard")
 )
