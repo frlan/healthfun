@@ -27,6 +27,11 @@ class Weight(models.Model):
     timestamp = models.DateTimeField(verbose_name=_(u"Messurement timestamp"))
     comment = models.TextField(blank=True, null=True)
 
-    
+    def bmi(self):
+        height = UserProfile.objects.get(pk=self.user.id).height
+        if height:
+            bmi = self.weight / (height **2 ) * 10000
+        return bmi
+        
     def __unicode__(self):
         return self.timestamp.strftime("%y-%m-%d: %H-%M")
