@@ -3,6 +3,13 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 
+class UserProfile (models.Model):
+    user = models.ForeignKey(User)
+    height = models.IntegerField(blank=True, null=True)
+    
+    def __unicode__(self):
+        return u'-'.join([self.user.username, unicode(self.id)])
+
 class Pressure (models.Model):
     user = models.ForeignKey(User)
     sys = models.FloatField(blank=False, null=False, verbose_name=_(u"systolic"))
@@ -10,7 +17,7 @@ class Pressure (models.Model):
     pulse = models.IntegerField(blank=False, null=False, verbose_name=_(u"Pulse"))
     timestamp = models.DateTimeField(verbose_name=_(u"Messurement timestamp"))
     comment = models.TextField()
-    
+
     def __unicode__(self):
         return self.timestamp.strftime("%y-%m-%d: %H-%M")
 
@@ -20,5 +27,6 @@ class Weight(models.Model):
     timestamp = models.DateTimeField(verbose_name=_(u"Messurement timestamp"))
     comment = models.TextField()
 
+    
     def __unicode__(self):
         return self.timestamp.strftime("%y-%m-%d: %H-%M")
