@@ -28,6 +28,7 @@ class Weight(models.Model):
     comment = models.TextField(blank=True, null=True)
 
     def bmi(self):
+        # Maybe this could be cached at some point. 
         height = UserProfile.objects.get(pk=self.user.id).height
         if height:
             bmi = self.weight / (height **2 ) * 10000
