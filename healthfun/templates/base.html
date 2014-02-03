@@ -10,10 +10,16 @@
 <body>
 
 <div>
-	{% if user.is_authenticated %}
+    {% if user.is_authenticated %}
         <p><span><a href="{% url "user_dashboard" %}">{{user}}</a> <a href="{% url "auth_logout" %}">Logout</a> </span></p>
     {% else %}
-        <p><span><a href="{% url "home" %}">Home</a> <a href="{% url "auth_login" %}">Login</a></span></p>
+        <p>
+            <span>
+                <a href="{% url "home" %}">Home</a> 
+                <a href="{% url "auth_login" %}">Login</a> 
+                <a href="{% url "registration_register" %}">Register</a>
+            </span>
+        </p>
     {% endif %}
 </div>
 
