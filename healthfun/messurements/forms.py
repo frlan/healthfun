@@ -14,5 +14,5 @@ class WeightForm(forms.ModelForm):
 
     class Meta:
         model = Weight
-        exclude = ('user', 'timestamp', 'comment')
+        exclude = ('user', 'timestamp', 'comment', '_bmi')
  

@@ -58,6 +58,7 @@ def PressureWeightView(request):
             weight = weight_form.save(commit=False)
             weight.timestamp = record_time
             weight.user = request.user
+            weight._bmi = weight.bmi()
             weight.save()
             return redirect('weight-list')
     else:

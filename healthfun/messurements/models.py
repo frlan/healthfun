@@ -27,8 +27,11 @@ class Weight(models.Model):
     timestamp = models.DateTimeField(verbose_name=_(u"Messurement timestamp"))
     comment = models.TextField(blank=True, null=True)
 
+    # Hidden fields
+    # Needs to be also inserted into 
+    _bmi = models.FloatField(blank=True, null=True)
+
     def bmi(self):
-        # Maybe this could be cached at some point. 
         height = UserProfile.objects.get(pk=self.user.id).height
         if height:
             bmi = self.weight / (height **2 ) * 10000
