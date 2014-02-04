@@ -28,7 +28,7 @@ class Weight(models.Model):
     comment = models.TextField(blank=True, null=True)
 
     # Hidden fields
-    # Needs to be also inserted into 
+    # Remember to be also inserted into list of hidden fields on forms/views 
     _bmi = models.FloatField(blank=True, null=True)
 
     def bmi(self):
