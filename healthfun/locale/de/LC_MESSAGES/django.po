@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: healthfun\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 23:11+0100\n"
+"POT-Creation-Date: 2014-02-08 22:01+0100\n"
 "PO-Revision-Date: 2014-01-26 23:13+0100\n"
 "Last-Translator: Frank Lanitz <frlan@frank.uvena.de>\n"
 "Language-Team: de <LL@li.org>\n"
@@ -18,29 +18,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: messurements/models.py:8
+#: messurements/models.py:10
+msgid "Target weight (kg)"
+msgstr ""
+
+#: messurements/models.py:11
+msgid "Weight you want to reach in full kg"
+msgstr "Gewicht, welches Du erreichen möchtest."
+
+#: messurements/models.py:17
 msgid "systolic"
 msgstr "systolisch"
 
-#: messurements/models.py:9
+#: messurements/models.py:18
 msgid "diastolic"
 msgstr "diastlisch"
 
-#: messurements/models.py:10
+#: messurements/models.py:19
 msgid "Pulse"
 msgstr "Puls"
 
-#: messurements/models.py:11 messurements/models.py:20
+#: messurements/models.py:20 messurements/models.py:29
 msgid "Messurement timestamp"
 msgstr "Messzeitpunkt"
 
-#: messurements/models.py:19
+#: messurements/models.py:28
 msgid "Weight"
 msgstr "Gewicht"
 
 #: templates/base.html:5
 msgid "en"
 msgstr "de"
+
+#: templates/dashboard.html:3
+#, fuzzy
+msgid "Healthfun: Dashboard"
+msgstr "Healthfun: Start"
+
+#: templates/dashboard.html:5
+msgid "Welcome, "
+msgstr "Willkommen, "
+
+#: templates/dashboard.html:7
+msgid "Add values"
+msgstr "Werte hinzufügen"
+
+#: templates/dashboard.html:8
+msgid "Show weights"
+msgstr "Gewichte anzeigen"
+
+#: templates/dashboard.html:9
+msgid "Show pressurs"
+msgstr "Drücke anzeigen"
 
 #: templates/index.html:3
 msgid "Healthfun: Start"
