@@ -6,7 +6,9 @@ from django.contrib.auth.models import User
 class UserProfile (models.Model):
     user = models.ForeignKey(User)
     height = models.IntegerField(blank=True, null=True)
-    
+    targetweight =models.IntegerField(blank=True, null=True, 
+                    verbose_name= _("Target weight (kg)"),
+                    help_text=_("Weight you want to reach in full kg"))
     def __unicode__(self):
         return u'-'.join([self.user.username, unicode(self.id)])
 
