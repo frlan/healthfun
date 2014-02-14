@@ -85,4 +85,4 @@ def PressureWeightView(request):
         'pressure_form': pressure_form,
         'weight_form': weight_form,
     }
-    return render(request, 'messurement/messurement_form.html', context)
+    return render(request, 'messurements/messurement_form.html', context)
