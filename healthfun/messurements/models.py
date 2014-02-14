@@ -9,6 +9,10 @@ class UserProfile (models.Model):
     targetweight =models.IntegerField(blank=True, null=True, 
                     verbose_name= _("Target weight (kg)"),
                     help_text=_("Weight you want to reach in full kg"))
+
+    def get_absolute_url(self):
+        return reverse("user_dashboard")
+        
     def __unicode__(self):
         return u'-'.join([self.user.username, unicode(self.id)])
 

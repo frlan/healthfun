@@ -5,11 +5,14 @@ from django.core.urlresolvers import reverse, reverse_lazy
 from django.db.models import Avg
 from django.contrib.auth.decorators import login_required
 
+# Class based views to create a new dataset and Update one
+from django.views.generic.edit import CreateView, UpdateView
+
 
 # Current time
 from django.utils.timezone import now
 
-from messurements.models import Pressure, Weight
+from messurements.models import Pressure, Weight, UserProfile
 from .forms import PressureForm, WeightForm
 
 ########################################################################
@@ -69,4 +72,24 @@ def PressureWeightView(request):
         'pressure_form': pressure_form,
         'weight_form': weight_form,
     }
-    return render(request, 'messurement/messurement_form.html', context)
+    return render(request, 'messurements/messurement_form.html', context)
+
+########################################################################
+
+
+class UserProfileCreateView(CreateView):
+    model = UserProfile
+    fields = ['height', 'targetweight']
+    
+    def form_valid(self, form):
+         user = self.request.user
+         form.instance.user = user
+         return super(UserProfileCreateView, self).form_valid(form)
+
+########################################################################
+
+class UserProfileUpdateView(UpdateView):
+    model = UserProfile
+    fields = ['height', 'targetweight']
+    
+    template_name_suffix = '_update_form'
