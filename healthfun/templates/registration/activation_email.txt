@@ -5,4 +5,4 @@
 {% block content %}
 <h1>{% trans "Thanks" %}</hi>
 <p>{% blocktrans %}for registering. Please visit {{site}}/accounts/activate/{{activation_key}} to activate your account.{% endblocktrans %}</p>
-{% endblock content}
+{% endblock content %}

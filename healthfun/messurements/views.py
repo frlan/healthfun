@@ -9,7 +9,6 @@ from django.contrib.auth.decorators import login_required
 # Class based views to create a new dataset and Update one
 from django.views.generic.edit import CreateView, UpdateView
 
-
 # Current time
 from django.utils.timezone import now
 
