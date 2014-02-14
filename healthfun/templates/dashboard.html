@@ -4,8 +4,9 @@
 {% block content %}
 <h1>{% trans "Welcome, " %}{{user}}</h1>
 <ul>
-	<li><a href="{% url "add_values" %}">{% trans "Add values" %}</a></li>
-	<li><a href="{% url "weight-list" %}">{% trans "Show weights" %}</a></li>
-	<li><a href="{% url "pressure-list" %}">{% trans "Show pressurs" %}</a></li>
+    <li><a href="{% url "add_values" %}">{% trans "Add values" %}</a></li>
+    <li><a href="{% url "add_weight" %}">{% trans "Add another weight" %}</a></li>
+    <li><a href="{% url "weight-list" %}">{% trans "Show weights" %}</a></li>
+    <li><a href="{% url "pressure-list" %}">{% trans "Show pressurs" %}</a></li>
 </ul>
 {% endblock %}
