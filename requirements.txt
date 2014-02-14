@@ -4,3 +4,4 @@ South
 argparse
 wsgiref
 pytz
+gunicorn

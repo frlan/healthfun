@@ -28,7 +28,8 @@ TEMPLATE_DEBUG = True
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
-    'django.contrib.auth.context_processors.auth'
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request'
 )
 
 TEMPLATE_DIRS = (
@@ -107,6 +108,7 @@ STATIC_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
+LOGIN_REDIRECT_URL = 'user_dashboard'
 
 # Temp. no real mail sending out
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
