@@ -6,6 +6,10 @@ from django.db.models import Avg
 from django.contrib.auth.decorators import login_required
 
 
+# Class based views to create a new dataset and Update one
+from django.views.generic.edit import CreateView, UpdateView
+
+
 # Current time
 from django.utils.timezone import now
 
@@ -41,6 +45,18 @@ class WeightListView(View):
              .values('date')
              .annotate(avg1=Avg('weight')))
         return render(request, self.template_name, {'output': qs})
+
+########################################################################
+
+class WeightFormView(CreateView):
+    model = Weight
+    fields = ['weight', 'comment']
+    
+    def form_valid(self, form):
+        user = self.request.user
+        form.instance.user = user
+        form.instance.timestamp = now()
+        return super(WeightFormView, self).form_valid(form)
 
 ########################################################################
 
